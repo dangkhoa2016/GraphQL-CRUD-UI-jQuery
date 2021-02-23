@@ -1,0 +1,56 @@
+
+<form class="">
+  <input type="hidden" name="___id" value="{{id}}" />
+  <div class="row">
+    <div class="col">
+      <div class="form-group"><label for="inputContent">Comment</label><textarea class="form-control" id="inputContent" type="text" name="comment">{{{comment}}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="inputPost">Post</label>
+        <select class="form-control custom-select" id="inputPost" name="postId">
+          {{#each posts}}
+            {{#ifCond post.id id }}
+              <option value="{{id}}" selected="selected">{{title}}</option>
+            {{else}}
+              <option value="{{id}}">{{title}}</option>
+            {{/ifCond}}
+          {{/each}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="inputStatus">Status</label>
+        <select class="form-control custom-select" id="inputStatus" name="status">
+          {{#select status}}
+          <option value="">Select status</option>
+          <option value="active">active</option>
+          <option value="disabled">disabled</option>
+          <option value="draft">draft</option>
+          {{/select}}
+        </select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="inputUser">User</label>
+        <select class="form-control custom-select" id="inputUser" name="userId">
+          {{#each users}}
+            {{#ifCond user.id id }}
+              <option value="{{id}}" selected="selected">{{name}}</option>
+            {{else}}
+              <option value="{{id}}">{{name}}</option>
+            {{/ifCond}}
+          {{/each}}
+        </select>
+      </div>
+      {{#if updatedAt}}
+      <div class="form-group">
+        <label class="col-form-label">Updated at: </label>
+        <p class="form-control-static">{{formatTime updatedAt 'MMM Do YYYY, h:mm:ss a'}}</p>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="row" id="msg-error">
+    <div class="col text-danger"></div>
+  </div>
+</form>

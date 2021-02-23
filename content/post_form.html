@@ -1,0 +1,46 @@
+
+<form class="">
+  <input type="hidden" name="___id" value="{{id}}" />
+  <div class="row">
+    <div class="col">
+      <div class="form-group"><label for="inputTitle">Title</label><input class="form-control" id="inputTitle" type="text" name="title" value="{{title}}"></div>
+      <div class="form-group"><label for="inputContent">Content</label><textarea class="form-control" id="inputContent" rows="6" type="text" name="content">{{{content}}}</textarea></div>
+      <div class="form-group">
+        <label for="inputStatus">Status</label>
+        <select class="form-control custom-select" id="inputStatus" name="status">
+          {{#select status}}
+          <option value="">Select status</option>
+          <option value="active">active</option>
+          <option value="disabled">disabled</option>
+          <option value="draft">draft</option>
+          {{/select}}
+        </select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group"><label for="inputSummary">Summary</label><textarea rows="3" class="form-control" id="inputSummary" type="text" name="summary">{{{summary}}}</textarea></div>
+      <div class="form-group"><label for="inputPhoto">Photo</label><input class="form-control" id="inputPhoto" type="text" name="photo" value="{{photo}}"></div>
+      <div class="form-group">
+        <label for="inputUser">User</label>
+        <select class="form-control custom-select" id="inputUser" name="userId">
+          {{#each users}}
+            {{#ifCond ../user.id id }}
+              <option value="{{id}}" selected="selected">{{name}}</option>
+            {{else}}
+              <option value="{{id}}">{{name}}</option>
+            {{/ifCond}}
+          {{/each}}
+        </select>
+      </div>
+      {{#if updatedAt}}
+      <div class="form-group">
+        <label class="col-form-label">Updated at: </label>
+        <p class="form-control-static">{{formatTime updatedAt 'MMM Do YYYY, h:mm:ss a'}}</p>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="row" id="msg-error">
+    <div class="col text-danger"></div>
+  </div>
+</form>
