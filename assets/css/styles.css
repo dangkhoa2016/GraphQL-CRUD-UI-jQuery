@@ -1,0 +1,197 @@
+/* Google Font: Source Sans Pro */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback');
+/* Font Awesome Icons */
+@import url('https://admin-lte-cdn.surge.sh/plugins/fontawesome-free/css/all.min.css');
+/* Theme style */
+@import url('https://admin-lte-cdn.surge.sh/dist/css/adminlte.min.css');
+
+.card-body table img { max-width: 200px }
+
+.loader_title {
+  top: 29%;
+  position: absolute;
+  margin-left: -111px;
+  left: 50%;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.css-star {
+  margin: 10px 0;
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 26px solid transparent;
+  border-bottom: 23px solid #e11a2b;
+  border-left: 23px solid transparent;
+  transform: rotate(180deg);
+}
+
+.css-star:before {
+  border-bottom: 18px solid #e11a2b;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -9px;
+  left: -16px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+.css-star:after {
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: -26px;
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-bottom: 22px solid #e11a2b;
+  border-left: 27px solid transparent;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
+  -o-transform: rotate(-70deg);
+  transform: rotate(-70deg);
+  content: '';
+}
+
+.loader {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: 35px;
+}
+
+.loader .css-star {
+  position: absolute;
+  transform: rotate(180deg) scale(0.5);
+  opacity: 0.4;
+}
+
+.loader .css-star,
+.loader .css-star:before,
+.loader .css-star:after {
+  border-bottom-color: #00e676;
+}
+
+.loader .star1 {
+  top: -20px;
+  left: 5px;
+  -webkit-animation: star-crazyness 1s 0.125s ease infinite;
+  animation: star-crazyness 1s 0.125s ease infinite;
+}
+
+.loader .star2 {
+  left: 25px;
+  top: -10px;
+  -webkit-animation: star-crazyness 1s 0.3s ease infinite;
+  animation: star-crazyness 1s 0.3s ease infinite;
+}
+
+.loader .star3 {
+  left: 35px;
+  top: 10px;
+  -webkit-animation: star-crazyness 1s 0.425s ease infinite;
+  animation: star-crazyness 1s 0.425s ease infinite;
+}
+
+.loader .star4 {
+  top: 30px;
+  left: 27px;
+  -webkit-animation: star-crazyness 1s 0.540s ease infinite;
+  animation: star-crazyness 1s 0.540s ease infinite;
+}
+
+.loader .star5 {
+  top: 40px;
+  left: 5px;
+  -webkit-animation: star-crazyness 1s 0.665s ease infinite;
+  animation: star-crazyness 1s 0.665s ease infinite;
+}
+
+.loader .star6 {
+  top: 30px;
+  left: -15px;
+  -webkit-animation: star-crazyness 1s 0.79s ease infinite;
+  animation: star-crazyness 1s 0.79s ease infinite;
+}
+
+.loader .star7 {
+  top: 10px;
+  left: -25px;
+  -webkit-animation: star-crazyness 1s 0.9s ease infinite;
+  animation: star-crazyness 1s 0.9s ease infinite;
+}
+
+.loader .star8 {
+  top: -10px;
+  left: -15px;
+  -webkit-animation: star-crazyness 1s 1s ease infinite;
+  animation: star-crazyness 1s 1s ease infinite;
+}
+
+@-webkit-keyframes star-crazyness {
+  0% {
+      opacity: 0.4;
+      transform: rotate(180deg) translate(0px, 0) scale(0.6);
+  }
+  25% {
+      opacity: 0.4;
+      transform: rotate(180deg) translate(0, 0) scale(0.2);
+  }
+  50% {
+      opacity: 0.7;
+      transform: rotate(180deg) translate(5px, 5px) scale(0.4);
+  }
+  75% {
+      opacity: 0.4;
+      transform: rotate(180deg) translate(0, 0) scale(0.6);
+  }
+  80% {
+      opacity: 1;
+      transform: rotate(180deg) translate(5px, 0) scale(0.1);
+  }
+  100% {
+      opacity: 0.4;
+      transform: rotate(180deg) translate(0, 0) scale(0.6);
+  }
+}
+
+@keyframes star-crazyness {
+  0% {
+      opacity: 0.4;
+      transform: rotate(180deg) translate(0px, 0) scale(0.6);
+  }
+  25% {
+      opacity: 0.4;
+      transform: rotate(180deg) translate(0, 0) scale(0.2);
+  }
+  50% {
+      opacity: 0.7;
+      transform: rotate(180deg) translate(5px, 5px) scale(0.4);
+  }
+  75% {
+      opacity: 0.4;
+      transform: rotate(180deg) translate(0, 0) scale(0.6);
+  }
+  80% {
+      opacity: 1;
+      transform: rotate(180deg) translate(5px, 0) scale(0.1);
+  }
+  100% {
+      opacity: 0.4;
+      transform: rotate(180deg) translate(0, 0) scale(0.6);
+  }
+}

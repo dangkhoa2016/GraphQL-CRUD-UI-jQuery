@@ -1,41 +1,61 @@
 
-<form class="">
-  <input type="hidden" name="___id" value="{{id}}" />
-  <div class="row">
-    <div class="col">
-      <div class="form-group"><label for="inputName">Name</label><input class="form-control" id="inputName" type="text" name="name" value="{{name}}"></div>
-      <div class="form-group"><label for="inputEmail">Email</label><input class="form-control" id="inputEmail" type="text" name="email" value="{{email}}"></div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col">
-            <label for="inputStatus">Status</label>
-            <select class="form-control custom-select" id="inputStatus" name="status">
+<form class=''>
+  <input type='hidden' name='___id' value='{{id}}' />
+  <div class='row'>
+    <div class='col'>
+      <div class='form-group'>
+        <label for='inputName'>Name</label>
+        <input class='form-control' id='inputName' type='text' name='name' value='{{name}}' />
+      </div>
+
+      <div class='form-group'>
+        <label for='inputEmail'>Email</label>
+        <input class='form-control' id='inputEmail' type='text' name='email' value='{{email}}' />
+      </div>
+
+      <div class='form-group'>
+        <div class='row'>
+          <div class='col'>
+            <label for='inputStatus'>Status</label>
+            <select class='form-control custom-select' id='inputStatus' name='status'>
               {{#select status}}
-              <option value="">Select status</option>
-              <option value="active">active</option>
-              <option value="disabled">disabled</option>
-              <option value="draft">draft</option>
+              <option value=''>Select status</option>
+              <option value='active'>active</option>
+              <option value='disabled'>disabled</option>
+              <option value='draft'>draft</option>
               {{/select}}
             </select>
           </div>
-          <div class="col">
-            <div class="form-group"><label for="inputPoints">Points</label><input class="form-control" id="inputPoints" type="text" name="points" value="{{points}}"></div>
+
+          <div class='col'>
+            <div class='form-group'>
+              <label for='inputPoints'>Points</label>
+              <input class='form-control' id='inputPoints' type='text' name='points' value='{{points}}' />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="form-group"><label for="inputBirth">Birthday</label><input class="form-control" id="inputBirth" type="text" name="birthday" value="{{birthday}}"></div>
-      <div class="form-group"><label for="inputPhone">Phone</label><input class="form-control" id="inputPhone" type="text" name="phone" value="{{phone}}"></div>
+
+    <div class='col'>
+      <div class='form-group'>
+        <label for='inputBirth'>Birthday</label>
+        <input class='form-control' id='inputBirth' type='text' name='birthday' value='{{birthday}}' />
+      </div>
+      <div class='form-group'>
+        <label for='inputPhone'>Phone</label>
+        <input class='form-control' id='inputPhone' type='text' name='phone' value='{{phone}}' />
+      </div>
       {{#if updatedAt}}
-      <div class="form-group">
-        <label class="col-form-label">Updated at: </label>
-        <p class="form-control-static">{{formatTime updatedAt 'MMM Do YYYY, h:mm:ss a'}}</p>
+      <div class='form-group'>
+        <label class='col-form-label'>Updated at: </label>
+        <p class='form-control-static'>{{formatTime updatedAt 'MMM Do YYYY, h:mm:ss a'}}</p>
       </div>
       {{/if}}
     </div>
   </div>
-  <div class="row" id="msg-error">
-    <div class="col text-danger"></div>
+
+  <div class='row' id='msg-error'>
+    <div class='col text-danger'></div>
   </div>
 </form>
